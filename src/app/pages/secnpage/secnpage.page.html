@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>secnpage</ion-title>
+    <icon-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </icon-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="moon" slot="start"></ion-icon>
+      <ion-label>Dark Theme</ion-label>
+      <ion-toggle slot="end" (ionChange)="switchTheme($event)"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>
