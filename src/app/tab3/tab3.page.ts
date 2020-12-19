@@ -15,7 +15,8 @@ export class Tab3Page {
     img: './img/photo2.png'
   }, {
     name: 'тарахтайка',
-    img: './img/photo3.png'
+    img: './img/photo3.png',
+    fd: 'fdsf'
   }];
 
   constructor() { }
