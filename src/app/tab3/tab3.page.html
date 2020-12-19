@@ -15,4 +15,13 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-item *ngFor="let anime of listanime" lines="full">
+    <ion-thumbnail slot="start">
+      <ion-img src="{{anime.img}}"></ion-img>
+    </ion-thumbnail>
+    <ion-lable>
+      <h3>{{anime.name}}</h3>
+    </ion-lable>
+  </ion-item>
 </ion-content>

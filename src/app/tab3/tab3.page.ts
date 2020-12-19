@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  public listanime = [{
+    name: 'fsdfsd',
+    img: 'https://yummyanime.club/img/posters/1581084177.jpg'
+  }, {
+    name: 'семь смертных грехов',
+    img: './img/photo2.png'
+  }, {
+    name: 'тарахтайка',
+    img: './img/photo3.png'
+  }];
+
   constructor() { }
+
 
 }
