@@ -8,3 +8,46 @@
         --ion-color-primary-tint: #ed5d69;
     }
 }
+
+.avatar-menu {
+    padding: 15px 25px 15px 25px;
+}
+
+p {
+    padding: 5px 0 0 0;
+    margin: 0;
+    color: rgb(110, 110, 126);
+    font-size: 13px
+}
+
+.header-color {
+    background: #282C34;
+}
+
+.header-caret {
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    position: absolute;
+    right: 15px;
+}
+
+.header-bookmark {
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    position: absolute;
+    right: 11px;
+    bottom: 70px;
+}
+
+.menuitem {
+    --ion-background-color: #30333C;
+    --ion-text-color: #fff;
+}
+
+.color-icon {
+    color: rgb(89, 90, 107);
+    width: 30px;
+    height: 30px;
+}

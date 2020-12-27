@@ -1,18 +1,40 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>secnpage</ion-title>
-    <icon-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </icon-buttons>
-  </ion-toolbar>
+    <ion-toolbar>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-icon name="moon" slot="start"></ion-icon>
-      <ion-label>Dark Theme</ion-label>
-      <ion-toggle slot="end" (ionChange)="switchTheme($event)"></ion-toggle>
-    </ion-item>
-  </ion-list>
+    <ion-segment [(ngModel)]="selectedSegment">
+        <ion-segment-button *ngFor="let item of segmentList; let i = index" [value]="item"
+            (click)="_segmentSelected(item,i)">
+            <ion-label>{{item}}</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <ion-slides #slide (ionSlideDidChange)="_ionSlideDidChange($event)">
+        <ion-slide>
+            <ion-item >
+                <ion-label>
+                    ппп1
+                </ion-label>
+            </ion-item>
+            <ion-item >
+                <ion-label>
+                    ппп2
+                </ion-label>
+            </ion-item>
+            <ion-item >
+                <ion-label>
+                    ппп3
+                </ion-label>
+            </ion-item>
+        </ion-slide>   
+        <ion-slide>
+            <div class="slide">
+                <h2>Welcome</h2>
+                <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.</p>
+            </div> 
+        </ion-slide>
+        
+    </ion-slides> 
 </ion-content>
