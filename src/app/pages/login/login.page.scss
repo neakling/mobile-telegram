@@ -1,0 +1,33 @@
+ion-header {
+    ion-toolbar {
+        --background: #35383F;
+        .header {
+            --color: white;
+        }
+    }
+}
+
+ion-content {
+    --background: #35383F;
+    form {
+        margin-top: 15px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        div {
+            ion-input {
+                background-color: #F6F6F6;
+                margin-top: 15px;
+                border-radius: 5px;
+            }
+
+            ion-button {
+                margin-top: 15px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

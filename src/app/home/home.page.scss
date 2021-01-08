@@ -1,0 +1,135 @@
+.chat-indent {
+                width: 55px;
+                height: 55px;
+}
+
+img {
+    max-width: 100px;
+}
+
+.time {
+    font-size: 13px;
+}
+.rightside {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    position: absolute;
+    padding-right: 10px;
+}
+.names {
+    font-size: 17px;
+    font-weight: 500;
+}
+p {
+    color: #808080;
+    font-size: 15px
+}
+
+ion-header {
+    background: #35383F;
+    color: white;
+
+    ion-toolbar {
+        
+        div {
+
+            ion-title,p.tonull {
+                margin: 0;
+                padding: 0;     
+            }
+        }
+        ion-icon {
+            width: 20px; 
+            height: 20px;
+        }
+    }
+
+    ion-segment {
+        ion-segment-button {
+            ion-icon.segment-color {
+                color: #666;
+            }
+        }
+    }
+}
+ion-content {
+    --background: #35383F;
+
+    ion-list {
+        ion-item.pinchats {
+            --background: #303338;
+            --color: #fff;
+
+            /* ion-avatar.chat-indent {
+
+            } */
+
+            ion-label {
+
+                div.rightside {
+
+                    ion-icon.success {
+                        color: #2DD36F;
+                        text-align: right;
+                    }
+
+                    /* p.time {
+
+                    } */
+                }
+
+                /* h2.names {
+
+                } */
+
+                div.rightpin {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    position: absolute;
+                    
+                    ion-icon.pin {
+                        width: 26px;
+                        height: 22px;
+                    }
+                }
+
+                /* p {
+
+                } */
+            }
+        }
+
+        ion-item.unpinchats {
+            --background: #35383F;
+            --color: #fff;
+
+            /* ion-avatar.chat-indent {
+
+            } */
+
+            ion-label {
+
+                /* div.rightside {
+
+                    p.time {
+
+                    }
+                } */
+
+                h2.names {
+
+                    ion-icon.volume {
+                        color: #666
+                    }
+                }
+                
+                /* ion-label {
+
+                } */
+            }
+        }
+    }
+}
