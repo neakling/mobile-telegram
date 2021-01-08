@@ -6,84 +6,105 @@
         </ion-toolbar>
     </ion-header> -->
     
-    <ion-menu side="start" menuId="main-menu" content-id="main" class="my-custom-menu">
-        <ion-header class="header-color">
+    <ion-menu side="start" menuId="main-menu" content-id="main">
+        <ion-header>
             <ion-toolbar color="gray">
                 <div class="avatar-menu">
                     <ion-avatar style="margin-bottom: 18px;">
                         <img src="/assets/img/avatar.jpg">
+                        <ion-icon (click)="onChat()"class="header-bookmark" name="bookmark-outline"></ion-icon>
                     </ion-avatar>
-                    <ion-icon class="header-bookmark" name="bookmark-outline"></ion-icon>
-                    <ion-label style="color: white">Виктория</ion-label>
-                    <p>+380 (11)111 11 11 <ion-icon class="header-caret" name="caret-down"></ion-icon></p>
+                    <div (click)="dropDown()">
+                        <ion-label style="color: white">Programmer</ion-label>
+                        <ion-icon class="header-caret" name="caret-down"></ion-icon>
+                        <p>+380 (11)111 11 11</p> 
+                    </div>
                 </div>
             </ion-toolbar>
         </ion-header>
         <ion-content>
-            <ion-list style="padding: 0px; margin:0px;">
+            <ion-list style="padding: 0px; margin: 0px;" class="menuitem">
+                <div *ngIf="isShown">
+                    <div class="dropdown">
+                        <ion-item>
+                            <ion-avatar slot="start">
+                                <img src="/assets/img/avatar.jpg" alt="avatar">
+                            </ion-avatar>
+                            <ion-label>
+                                <h2>Programmer</h2>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-icon class="color-icons" slot="start" name="add-outline"></ion-icon>
+                            <ion-label>
+                                <h2>Add Account</h2>
+                            </ion-label>
+                        </ion-item>
+                    </div>
+                </div>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="people-circle-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="people-circle-outline" slot="start"></ion-icon>
                         <ion-label>New Group</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="gift-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="gift-outline" slot="start"></ion-icon>
                         <ion-label>New Secret Chat</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="tv-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="tv-outline" slot="start"></ion-icon>
                         <ion-label>New Channel</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="person-circle-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="person-circle-outline" slot="start"></ion-icon>
                         <ion-label>Contacts</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="location-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="location-outline" slot="start"></ion-icon>
                         <ion-label>People Nearby</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="star-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="star-outline" slot="start"></ion-icon>
                         <ion-label>Saved Messages</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="call-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="call-outline" slot="start"></ion-icon>
                         <ion-label>Calls</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/settings" class="menuitem">
-                        <ion-icon class="color-icon" name="settings" slot="start"></ion-icon>
+                    <ion-item routerLink="/settings">
+                        <ion-icon class="color-icons" name="settings" slot="start"></ion-icon>
                         <ion-label>Settings</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="add-circle-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="add-circle-outline" slot="start"></ion-icon>
                         <ion-label>Plus Settings</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="folder-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="folder-outline" slot="start"></ion-icon>
                         <ion-label>Categories</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item routerLink="/" class="menuitem">
-                        <ion-icon class="color-icon" name="color-palette-outline" slot="start"></ion-icon>
+                    <ion-item routerLink="/">
+                        <ion-icon class="color-icons" name="color-palette-outline" slot="start"></ion-icon>
                         <ion-label>Download themes</ion-label>
                     </ion-item>
                 </ion-menu-toggle>
